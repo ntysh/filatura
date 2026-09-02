@@ -1,58 +1,31 @@
-# как с этим работать
+# What is it?
 
-Тут все на обычном HTML, CSS и JavaScript (ничего ставить и собирать не
-надо).
+This is an artistic digital artefact, devoted to the STOLL Knitting Machine and her breakdowns. It mimics the internal STOLL software, but reuses it to tell a personal story in a form of interactive manual. It is accessible at Github Pages: https://ntysh.github.io/filatura/. 
 
-## как открыть
+# How is it built?
 
-Сам `index.html` откроется и так, но Firefox нормальнее работает через маленький
-локальный сервер. Открой терминал в этой папке и запусти:
+HTML, CSS, Javascript.
 
-```sh
-python3 -m http.server 8765
-```
 
-потом открой <http://localhost:8765>.
+# Architecture
 
-## как положить что-то за кнопку
+Individual sections of the manual as separate HTML files inside the `/pages/`.
+The media-files are stored in `/assets/`.
 
-1. Найди файл этой кнопки в `pages/`.
-2. Замени фразу “not yet assigned” своим текстом или медиа.
-3. Поменяй ее статус в `pages/text-index.html`.
-4. Если окну нужно больше места, поменяй `data-popup-width` и
-   `data-popup-height` у нужной ссылки в `index.html`.
+JavaScript controls the opening and positioning of native browser popup windows. Each popup functions as a fragment of the manual and can contain text, images, quotations, links, or further connections to other pages.
 
-Например:
+CSS is used to define the visual language of the archive, while some individual pages contain their own local styles.
 
-```html
-data-popup-width="640" data-popup-height="500"
-```
 
-В `pages/demo.html` есть готовые примеры для текста, картинки, аудио, видео и
-сносок. Копируй то, что тебе нужно; сами файлы клади куда-нибудь внутрь
-`assets/`; картинкам добавляй alt-текст и где полезно подпись.
+## User Interface
 
-## как ведут себя окна
+A standard click prompts the browser to open a window roughly centered on the GUI button. The size is determined before the window opens, so it does not appear in one location only to jump to another. If the text extends above the window, it scrolls.
 
-Обычный клик просит Firefox открыть окно примерно по центру кнопки. Размер
-задается до открытия, поэтому окно не должно сначала появляться в одном месте,
-а потом прыгать. Если текст выше окна, он скроллится.
 
-Я ориентировался на Firefox. Chrome и Safari могут немного подвинуть окно,
-изменить его размер или открыть все во вкладке - этой частью управляет сам
-браузер.
 
-**Back to index** сначала просит текущее окно закрыться. Это работает для окна,
-которое открылось обычным кликом по кнопке. Если ты открыла адрес страницы
-напрямую, пришла через текстовый индекс или использовала Cmd/Ctrl-click, браузер
-может считать ее обычной вкладкой и не разрешить закрытие. Тогда ссылка просто
-вернет тебя в графический индекс.
-
-## как проверить, что ничего не отвалилось
-
-Скорее всего тебе это не понадобится, но после переименования файлов, ссылок или
-перестановки кнопок можно запустить:
-
+## Tests
+Tested manually in Firefox and Chrome. 
+Auto-tests are at:
 ```sh
 node --test tests/archive.test.cjs
 ```
