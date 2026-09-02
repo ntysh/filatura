@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>ARCHIVE - Demo page</title>
+    <link rel="stylesheet" href="archive.css">
+  </head>
+  <body>
+    <main>
+      <article>
+        <!-- Здесь заголовок и любой контекст, который тебе нужен. -->
+        <h1>Demo page<sup><a href="#note-1">[1]</a></sup></h1>
+        <p class="byline">[Author or source]<br>[Date or context]</p>
+
+        <!-- Если есть картинка, оставь этот figure; если нет — удали его. -->
+        <figure class="lead-media">
+          <img src="../assets/demo/demo-image.png" alt="Blue grid used as a demo image" width="960" height="600">
+          <figcaption>Demo image. Replace the file, alternative text, and caption.</figcaption>
+        </figure>
+
+        <!-- Здесь твой текст. Абзацы можно спокойно добавлять и удалять. -->
+        <p>This page shows the default styles. Replace this text when the content is ready.</p>
+        <p>Ordinary <a href="#demo-media">hyperlinks</a>, paragraphs, media, captions, and footnotes use standard HTML.</p>
+
+        <section id="demo-media" class="media-section">
+          <h2>Demo media</h2>
+
+          <!-- Если есть аудио, оставь этот figure; если нет — удали его. -->
+          <figure>
+            <audio controls preload="metadata">
+              <source src="../assets/demo/demo-audio.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+            <figcaption>Demo audio. Replace the file and caption.</figcaption>
+          </figure>
+
+          <!-- Если есть видео, оставь этот figure; если нет — удали его. -->
+          <figure>
+            <video controls preload="metadata" poster="../assets/demo/demo-image.png">
+              <source src="../assets/demo/demo-video.mp4" type="video/mp4">
+              Your browser does not support the video element.
+            </video>
+            <figcaption>Demo video. Replace the file, poster, and caption.</figcaption>
+          </figure>
+        </section>
+
+        <!-- Если есть сноски, оставь эту секцию; если нет — удали её. -->
+        <section class="footnotes" aria-labelledby="footnotes-title">
+          <h2 id="footnotes-title" class="visually-hidden">Footnotes</h2>
+          <ol>
+            <li id="note-1">Demo footnote. Replace or remove.</li>
+          </ol>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

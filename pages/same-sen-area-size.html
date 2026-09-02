@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistake Schema</title>
+  <link rel="preload" href="popup2.css" as="style">
+  <link rel="prefetch" href="01-root.html">
+  <link rel="prefetch" href="02-pocket.html">
+  <link rel="prefetch" href="03-kharms.html">
+  <link rel="prefetch" href="04-befriend.html">
+  <link rel="prefetch" href="05-cyberfeminism.html">
+  <link rel="prefetch" href="06-opportunity.html">
+  <link rel="prefetch" href="07-failure.html">
+  <link rel="prefetch" href="08-revolutions.html">
+  <link rel="prefetch" href="09-balaclava.html">
+  <link rel="prefetch" href="10-affirmation.html">
+  <link rel="prefetch" href="11-haunt.html">
+  <link rel="prefetch" href="12-debug.html">
+  <link rel="prefetch" href="13-qa.html">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 1px 1px, #343434 1px, transparent 1.2px) 0 0 / 20px 20px,
+        #181818;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .panel {
+      width: min(620px, calc(100vw - 40px));
+      padding: 28px;
+      border: 2px solid #777;
+      border-radius: 12px;
+      background: #202020;
+    }
+    h1 { margin: 0 0 18px; font-size: 24px; font-weight: 500; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    a, button {
+      border: 1px solid #777;
+      background: #202020;
+      color: #eee;
+      padding: 11px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font: inherit;
+      cursor: pointer;
+    }
+    a:hover, button:hover { border-color: #fff; }
+    .note {
+      margin: 18px 0 0;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <h1>WHAT CAN YOU DO WITH A MISTAKE?</h1>
+    <div class="actions">
+      <a href="schema-map.html">OPEN HYPERLINKED MAP</a>
+      <button type="button" onclick="openNode('root')">OPEN ROOT POPUP</button>
+      <button type="button" onclick="openFullSchema()">OPEN ALL POPUPS</button>
+    </div>
+    <p class="note">
+      All popup HTML files are preloaded into the browser cache. Clicking a connection
+      inside a popup opens the linked node at its configured coordinate.
+    </p>
+  </main>
+  <script src="schema-popups.js"></script>
+  <script>preloadSchema();</script>
+</body>
+</html>

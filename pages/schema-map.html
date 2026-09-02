@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistake Schema</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background:
+        radial-gradient(circle at 1px 1px, #343434 1px, transparent 1.2px) 0 0 / 20px 20px,
+        #181818;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: auto;
+    }
+    .canvas {
+      position: relative;
+      width: 1240px;
+      height: 1248px;
+      margin: 0 auto;
+    }
+    svg {
+      position: absolute;
+      inset: 0;
+      width: 1240px;
+      height: 1248px;
+      pointer-events: none;
+    }
+    path {
+      fill: none;
+      stroke: #7c7c7c;
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .box {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      min-height: 68px;
+      padding: 15px 18px;
+      border: 2px solid #777;
+      border-radius: 9px;
+      background: #202020;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 19px;
+      line-height: 1.35;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .box:hover, .box:focus {
+      border-color: #fff;
+      transform: translateY(-2px);
+      outline: none;
+    }
+    .root { left: 23px; top: 47px; width: 292px; }
+    .pocket { left: 396px; top: 294px; width: 292px; }
+    .kharms { left: 629px; top: 125px; width: 292px; }
+    .befriend { left: 392px; top: 409px; width: 262px; }
+    .cyber { left: 688px; top: 498px; width: 292px; }
+    .opp { left: 371px; top: 596px; width: 292px; }
+    .failure { left: 776px; top: 653px; width: 294px; }
+    .revolutions { left: 776px; top: 746px; width: 292px; min-height: 111px; }
+    .balaclava { left: 338px; top: 743px; width: 292px; }
+    .affirmation { left: 294px; top: 860px; width: 292px; }
+    .haunt { left: 717px; top: 941px; width: 292px; }
+    .debug { left: 244px; top: 1012px; width: 292px; }
+    .qa { left: 650px; top: 1132px; width: 329px; }
+    .controls {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      z-index: 20;
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      border: 1px solid #777;
+      background: #202020;
+      color: #eee;
+      padding: 9px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover { border-color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <button type="button" onclick="openNode('root')">OPEN ROOT</button>
+    <button type="button" onclick="openFullSchema()">OPEN ALL POPUPS</button>
+  </div>
+
+  <main class="canvas">
+    <svg viewBox="0 0 1240 1248" aria-hidden="true">
+      <defs>
+        <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6"
+                orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L12,6 L0,12 z" fill="#7c7c7c" stroke="none"/>
+        </marker>
+      </defs>
+
+      <path marker-end="url(#arrow)" d="M315 84 C385 88, 350 300, 395 322"/>
+      <path marker-end="url(#arrow)" d="M315 84 C390 90, 353 416, 392 437"/>
+      <path marker-end="url(#arrow)" d="M315 84 C389 91, 323 606, 371 625"/>
+      <path marker-end="url(#arrow)" d="M315 84 C392 92, 275 757, 338 774"/>
+      <path marker-end="url(#arrow)" d="M315 84 C395 93, 250 870, 294 894"/>
+      <path marker-end="url(#arrow)" d="M315 84 C400 95, 180 1024, 244 1047"/>
+
+      <path marker-end="url(#arrow)" d="M540 294 C540 242, 756 285, 775 193"/>
+      <path marker-end="url(#arrow)" d="M525 477 C515 555, 790 422, 835 498"/>
+      <path marker-end="url(#arrow)" d="M663 628 C730 630, 727 682, 776 686"/>
+      <path marker-end="url(#arrow)" d="M663 630 C735 630, 697 790, 776 805"/>
+      <path marker-end="url(#arrow)" d="M586 895 C650 895, 654 974, 717 976"/>
+      <path marker-end="url(#arrow)" d="M536 1047 C602 1047, 573 1163, 650 1168"/>
+    </svg>
+
+    <a class="box root" href="01-root.html" onclick="return openNode('root')">WHAT CAN YOU DO WITH A MISTAKE?</a>
+    <a class="box pocket" href="02-pocket.html" onclick="return openNode('pocket')">PUT IT IN YOUR POCKET LIKE A HOLE</a>
+    <a class="box kharms" href="03-kharms.html" onclick="return openNode('kharms')">DANIIL ANDREYEVICH KHARMS WOULD HELP HERE</a>
+    <a class="box befriend" href="04-befriend.html" onclick="return openNode('befriend')">BECOME FRIENDS WITH IT</a>
+    <a class="box cyber" href="05-cyberfeminism.html" onclick="return openNode('cyberfeminism')">CYBERFEMINISM</a>
+    <a class="box opp" href="06-opportunity.html" onclick="return openNode('opportunity')">USE IT AS AN OPPORTUNITY</a>
+    <a class="box failure" href="07-failure.html" onclick="return openNode('failure')">PHILOSOPHY OF FAILURE</a>
+    <a class="box revolutions" href="08-revolutions.html" onclick="return openNode('revolutions')">LES PEUPLES VEULENT AND THEIR FAILED ORANGE REVOLUTIONS</a>
+    <a class="box balaclava" href="09-balaclava.html" onclick="return openNode('balaclava')">DEEPEN THE HOLE AND MAKE A BALACLAVA 🥷</a>
+    <a class="box affirmation" href="10-affirmation.html" onclick="return openNode('affirmation')">MAKE AN AFFIRMATION</a>
+    <a class="box haunt" href="11-haunt.html" onclick="return openNode('haunt')">MISTAKES DO NOT HAUNT ME</a>
+    <a class="box debug" href="12-debug.html" onclick="return openNode('debug')">DEBUG IT, DISTANCE IT</a>
+    <a class="box qa" href="13-qa.html" onclick="return openNode('qa')">QUALITY ASSURANCE, DEBUGGING</a>
+  </main>
+
+  <script src="schema-popups.js"></script>
+  <script>preloadSchema();</script>
+</body>
+</html>

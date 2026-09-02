@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>I would give ANYTHING just to code you</title>
+  <link rel="prefetch" href="quote-06.html">
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+    }
+    body {
+      display: grid;
+      place-items: center;
+    }
+    button {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      max-width: 100%;
+    }
+    button:focus-visible {
+      outline: 1px dotted currentColor;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" aria-label="Open Donna Haraway quote: knowledge potent for constructing worlds" onclick="openQuote()">
+    <div style="display: inline-flex; text-align: center; justify-content: center; align-items: center; line-height: 100%; padding: 7.7px; font-size: 15px; font-style: normal; object-fit: contain; font-family: Arial; background-image: url(&quot;https://autopoies.is/buttons/bg/5.gif&quot;); text-shadow: rgb(0, 0, 0) 0px 5px 3px; flex-wrap: wrap;"><span style="display:flex;">I would give ANYTHING just to code you</span><span style="width:100%">૮₍ ´• ˕ •` ₎ა</span></div>
+  </button>
+
+  <script>
+    function openQuote() {
+      const width = 370;
+      const height = 165;
+
+      // Open the quote immediately to the right of this little button window.
+      const left = Math.round(window.screenX + window.outerWidth + 12);
+      const top = Math.round(window.screenY + 8);
+
+      window.open(
+        "quote-06.html",
+        "haraway-quote-06",
+        [
+          `width=${width}`,
+          `height=${height}`,
+          `left=${left}`,
+          `top=${top}`,
+          "resizable=yes",
+          "scrollbars=no",
+          "toolbar=no",
+          "menubar=no",
+          "location=no",
+          "status=no"
+        ].join(",")
+      );
+    }
+
+    // Warm the quote file before the click.
+    fetch("quote-06.html", { cache: "force-cache" }).catch(() => null);
+  </script>
+</body>
+</html>

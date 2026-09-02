@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Yarn guide</title>
+  <link rel="stylesheet" href="archive.css">
+  <script src="entry.js" defer></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      padding: 11px 24px 18px;
+    }
+
+    main {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 400;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tasks > li {
+      position: relative;
+      margin: 4px 0 6px;
+      padding-left: 33px;
+      font-size: 20px;
+      line-height: 1.38;
+      font-weight: 400;
+    }
+
+    .tasks > li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 19px;
+      line-height: 1.38;
+    }
+
+    .subtasks {
+      margin-top: 3px;
+      margin-left: 0;
+    }
+
+    .subtasks li {
+      position: relative;
+      margin: 1px 0;
+      padding-left: 28px;
+      font-size: 20px;
+      line-height: 1.38;
+    }
+
+    .subtasks li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Yarn guide</h1>
+    <p class="intro">The yarn guide has the following tasks:</p>
+
+    <ul class="tasks">
+      <li>
+        Guiding knitting yarn
+        <ul class="subtasks">
+          <li>from the bobbin to the yarn carrier</li>
+          <li>as friction-free as possible</li>
+          <li>without the threads touching or crossing over each other</li>
+        </ul>
+      </li>
+      <li>
+        Controlling knitting yarn for
+        <ul class="subtasks">
+          <li>thread end</li>
+          <li>Thread breakage</li>
+          <li>Knots</li>
+        </ul>
+      </li>
+      <li>Controlling yarn tension</li>
+      <li>Preventing sagging threads with yarn tensioning</li>
+    </ul>
+  </main>
+</body>
+</html>

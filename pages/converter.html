@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMAGE -&gt; PERSONAL.JAC</title>
+    <link rel="stylesheet" href="converter.css?v=8">
+  </head>
+  <body>
+    <main class="converter">
+      <p class="status">This is Image2ASCII converter, choose any picture and convert it to Jacquard pattern</p>
+
+      <section class="workbench" aria-label="Image conversion preview">
+        <label class="well source-well" for="image-input" aria-label="Choose another source image">
+          <img id="source" alt="">
+        </label>
+        <section class="well terminal-well" aria-label="JAC terminal output">
+          <p id="terminal-command" class="terminal-command" hidden>&gt; LOAD PERSONAL.JAC</p>
+          <pre id="ascii" class="ascii-well" aria-label="ASCII output"></pre>
+          <p class="terminal-prompt" aria-hidden="true">&gt; <span class="terminal-cursor"></span></p>
+        </section>
+      </section>
+
+      <p class="actions">
+        <label class="text-link" for="image-input">choose another image</label>
+        <input id="image-input" type="file" accept="image/*" hidden>
+        <a id="save" download="PERSONAL.JAC" aria-disabled="true">save PERSONAL.JAC</a>
+      </p>
+    </main>
+
+    <script src="converter.js?v=8"></script>
+  </body>
+</html>

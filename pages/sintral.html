@@ -1,0 +1,75 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head xmlns:forms="http://www.schema.de/2010/ST4/Layout/MarkupLanguage/Forms"><meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="generator" content="SCHEMA ST4, Bootstrap 2019 v1" /><meta name="id" content="9046169227" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="msapplication-config" content="none" /><meta name="description" content="Sintral" /><link rel="icon" type="image/x-icon" href="../assets/ico/favicon.ico" /><link layout-comment="OpenIconic-Font" rel="stylesheet" href="../assets/css/open-iconic-bootstrap.min.css" /><link rel="stylesheet" href="../assets/css/base_ltr/01-bootstrap.min.css" /><link rel="stylesheet" href="../assets/css/schema-glyphs.css" /><link rel="stylesheet" href="../assets/css/formats.css" /><link rel="stylesheet" href="../assets/css/custom.css" /><meta name="prev" content="9046128395" /><meta name="next" content="9046187019" /><script>var fileExtension = "html";</script><title>Sintral</title></head><body class="schema-index content-container container" id="9046169227" lang="en" xmlns:forms="http://www.schema.de/2010/ST4/Layout/MarkupLanguage/Forms" data-node-id="9046169227" data-culture="en" dir="ltr"><header class="d-print-none"></header><article class="highlightable" role="main" aria-labelledby="heading-9046169227"><h1 id="heading-9046169227">Sintral</h1><div class="metalist">
+              
+              
+            </div><ul class="list"><li value="1">Sintral is a machine language developed by Stoll. </li><li value="2">The text-based file contains all the relevant knitting specifications as function.</li></ul><figure class="img_original" aria-label="Fig. "><img src="sintral.png" width="519" height="593" /></figure><h2 style="font-size:x-large;">I. Structure: </h2><table class="table tabletype-framed table-scaled" aria-label="" data-legend-id="ID0EBMS1"><colgroup><col style="width: 14.00cm;"></col></colgroup><tbody><tr><td>
+                      <p class="text-left">
+                        <strong>Program structure</strong>
+                      </p>
+</td></tr><tr><td><p class="text-left"><code>1 C CMS530.Vollfang_2_Farben_E8 ... &lt;SETUP2&gt;</code></p>
+</td></tr><tr><td><p class="text-left"><code>11 C NP1=9.0 Netz<br /> 12 C NP2=10.0 Schlauch-Netz<br /> 13 C NP3=9.5 1x1-Rapport<br /> 14 C NP4=12.0 Übergang<br /> 15 C NP5=10.0 Masche vorne Farbe1<br /> 16 C NP6=10.0 Fang hinten Farbe1<br /> 17 C NP7=8.8 Fang vorne Farbe2<br /> 18 C NP8=9.6 Masche hinten Farbe2<br /> 19 C NP9=12.0 Struk. einflaechig vorne<br /> 20 C NP11=7.9 Netz vorne<br /> 21 C NP17=12.0 Schutzreihen<br /> 22 C NP20=9.0 Anfang1<br /> 23 C NP21=10.0 Anfang2<br /> 24 C NP22=11.0 Anfang3<br /> 25 C NP24=12.0 Anfang5<br /> 26 C NP25=16.0 Kammfaden<br /> 27 C MSECI=0.70</code></p>
+</td></tr><tr><td><p class="text-left"><strong>40 START</strong><code><br /> 41 C #98=0 C Cast-off On/Off (#98=0)<br /> 42 C #69=0 C MS*#69 (1-4s) (#69=1…4)<br /> 43 PF0<br /> 44 Y-CR1<br /> 50 YGC:1=A 2=B/ 4=C 5=D 8=E;<br /><br /> 61 YD YC<br /><br /> 80 FBEG: M1-SIZES;<br /> 81 F1=<br /> 82 PA: PAI:<br /> 83 PM:1:F1; SEN=…… #51=… #52=…<br /> 84 FEND C M1-Sizes<br /> 85 JA1= …(…-…)<br />110 #99=0<br />111 IF RS17=0 S0Y #99=1<br />112 IF RS17=1 S0YCR0 #99=1<br />113 IF #99=1 #99=0 MS PRINT / CHECK YARN CARRIER/<br /><br />114 F:M1-SINTRAL;<br /><br /></code><strong>xx END</strong></p>
+</td></tr><tr><td><p class="text-left"><code>xx FBEG:… (Funktionsbeginn)<br />xx FEND (Funktionsend)</code></p>
+</td></tr><tr><td><p class="text-left"><code>999 S0 W0</code></p>
+</td></tr></tbody></table><h2 style="font-size:x-large;">II. Knitting instructions:</h2><table class="table tabletype-header table-scaled" aria-label="" data-legend-id="ID0EBMS1"><colgroup><col style="width: 2.50cm;"></col><col style="width: 7.98cm;"></col></colgroup><thead><tr><th>
+                      <p class="text-left">Sintral command</p>
+                    </th><th><p class="text-left">Meaning</p></th></tr></thead><tbody><tr><td><p class="text-left"><span class="emphasis-name">&lt;&lt;</span></p>
+</td><td><p class="text-left">Carriage direction to the left</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">&gt;&gt;</span></p>
+</td><td><p class="text-left">Carriage direction to the right</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">&lt;&gt;</span></p>
+</td><td><p class="text-left">any carriage direction</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">S: ...-...;</span></p>
+</td><td><p class="text-left">Knitting specification</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">*+.ABEGHIKLMOPQTWYZ<br />abeghiklmopqtwxyz</span></p>
+</td><td><p class="text-left">Jacquard symbols for single needle selection </p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">N</span></p>
+</td><td><p class="text-left">Symbols written after N are not selected, but all other symbols</p>
+<p class="text-left">Example: S: A - NA ;</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">%.</span></p>
+</td><td><p class="text-left">Symbols written after the % move needles to the tuck position,<br />symbols written before % in the stitch position</p>
+<p class="text-left">Example: S: A%Y – 0;</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">0</span></p>
+</td><td><p class="text-left">All needle do not knit</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">-</span></p>
+</td><td><p class="text-left">Break between front and rear system</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">/</span></p>
+</td><td><p class="text-left">Break between the systems</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">;</span></p>
+</td><td><p class="text-left">End of a knitting specification </p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">&lt;1-&gt;</span></p>
+</td><td><p class="text-left">Decrease Jacquard</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">&lt;A&gt;</span></p>
+</td><td><p class="text-left">Releases the Jacquard selection in the color field A </p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">Y:...;</span></p>
+</td><td><p class="text-left">Yarn Carriers</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">S1 .... S6</span></p>
+</td><td><p class="text-left">Knitting system 1 to knitting system 6</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">U^S</span></p>
+</td><td><p class="text-left">Transfer to rear</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">UVS</span></p>
+</td><td><p class="text-left">Transfer to Front</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">UXS</span></p>
+</td><td><p class="text-left">Transfer to the rear and to the front</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">MCWSn-m</span></p>
+</td><td><p class="text-left">Carriage path from needle n to m</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">RS</span></p>
+</td><td><p class="text-left">Cycle Counters</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">FBEG</span></p>
+</td><td><p class="text-left">Beginning of the function</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">FEND</span></p>
+</td><td><p class="text-left">Function end</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">SBEG</span></p>
+</td><td><p class="text-left">Start of stroke processing.<br />The knitting specifications are determined using conditions. </p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">SEND</span></p>
+</td><td><p class="text-left">End of stroke processing.</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">JA1 .....8 </span></p>
+</td><td><p class="text-left">Jacquard1 .... 8</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">#</span></p>
+</td><td><p class="text-left">Counters</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">IF </span></p>
+</td><td><p class="text-left">IF-decisions</p>
+</td></tr><tr><td><p class="text-left"><span class="emphasis-name">IFN</span></p>
+</td><td><p class="text-left">If not...</p>
+</td></tr></tbody></table><div class="image">
+              
+            </div></article><footer><p class="text-muted footer" aria-label="copyright">© 2025 / 03,   CKC 2.1,   KARL MAYER STOLL Textilmaschinen GmbH</p></footer><script src="../assets/js/00-jquery-3.4.1.min.js"></script><script src="../assets/js/01-popper.min.js"></script><script src="../assets/js/02-schema.js"></script><script src="../assets/js/03-snap.svg-min.js"></script><script src="../assets/js/04-schema-common-search.js"></script><script src="../assets/js/05-svg-highlight.js"></script><script src="../assets/js/06-text-highlighting.js"></script><script src="../assets/js/30-stoll-replace.js"></script><script src="../assets/js/40-akkordeon-fragment.js"></script><script src="../assets/js_ltr/06-bootstrap.min.js"></script><script src="../assets/js_iframe/00-schema-iframe.js"></script></body></html>
